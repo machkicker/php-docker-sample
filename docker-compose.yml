@@ -26,16 +26,6 @@ services:
     ports: 
       - 13306:3306
 
-  postgres:
-    restart: always
-    image: postgres:alpine
-    container_name: "laravel-postgres"
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-    ports:
-      - 15432:5432
-
   redis:
     image: redis:alpine
     container_name: "laravel-redis"
